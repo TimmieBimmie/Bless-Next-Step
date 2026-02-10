@@ -26,7 +26,7 @@
 
 ---
 
-- [Be Vietnam Pro](https://www.fontshare.com/fonts/beVietnam-pro)
+- [Delight](https://rajputrajesh-448.gumroad.com/l/Delight9)
 - [Familjen Grotesk](https://bestfreefonts.com/familjen-grotesk?text=Wie+werde+ich+)
 
 
