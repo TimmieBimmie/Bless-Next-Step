@@ -1,25 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
 
-onMounted(() => {
-gsap.from(".box", {
-y: 100,
-opacity: 0,
-duration: 1,
-scrollTrigger: {
-trigger: ".box",
-start: "top 80%",
-toggleActions: "play none none none"
-}
-})
-})
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-  <div ></div>
+  <header>
+    <Header></Header>
+  </header>
+  <main>
+    <RouterView></RouterView>
+  </main>
+  <footer>
+    <Footer></Footer>
+  </footer>
 </template>
 
 <style scoped></style>

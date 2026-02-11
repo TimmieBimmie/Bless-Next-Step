@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap');
+@import "tailwindcss";
+
+@font-face {
+    font-family: Delight;
+    src: url("assets/fonts/Delight-ExtraBold.ttf");
+}
+
+.bg-primary {
+    background-color: #ff784f;
+}
+
+.bg-lite {
+    background-color: #ffffef;
+}
+
+.bg-dark {
+    background-color: #10100e;
+}
+
+h1 {
+    font-family: Delight, "Familjen Grotesk", Helvetica, sans-serif;
+}
+
+p, span {
+    font-family: "Familjen Grotesk", Helvetica, sans-serif;
+    word-spacing: 2px;
+    letter-spacing: -2px;
+}
+
+#app {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: clip;
+    overflow-y: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+html, body {
+    width: 100vw;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    display: block;
+    background-color: #fdfdf1;
+    overflow-y: auto;
+}
+
+.familjen-grotesk {
+    font-family: "Familjen Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
