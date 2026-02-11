@@ -11,7 +11,7 @@
 ---
 
 - **#FF5E30** <div style="height: 50px; aspect-ratio: 1/1; background-color: #478778; display: inline-flex; transform: translate(25px, 25px)"></div>
-- **#FFFFE3**<div style="height: 50px; aspect-ratio: 1/1; background-color: #FFFFE3; display: inline-flex; transform: translate(25px, 25px)"></div>
+- **#ffffef**<div style="height: 50px; aspect-ratio: 1/1; background-color: #ffffef; display: inline-flex; transform: translate(25px, 25px)"></div>
 - **#10100e** <div style="height: 50px; aspect-ratio: 1/1; background-color: #10100e; display: inline-flex; transform: translate(25px, 25px)"></div>
 
 <div style="height: 200px; width: 30%;  background-color: #478778; display: inline-flex; transform: translate(25px, 25px)"></div>
