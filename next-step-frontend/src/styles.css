@@ -7,7 +7,7 @@
 }
 
 .bg-primary {
-    background-color: #ff784f;
+    background-color: #4f95ff;
 }
 
 .bg-lite {
@@ -22,7 +22,7 @@ h1 {
     font-family: Delight, "Familjen Grotesk", Helvetica, sans-serif;
 }
 
-p, span {
+p {
     font-family: "Familjen Grotesk", Helvetica, sans-serif;
     word-spacing: 2px;
     letter-spacing: -2px;
@@ -30,7 +30,10 @@ p, span {
 
 #app {
     width: 100%;
+    position: relative;
     min-height: 100%;
+    max-width: 1350px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,7 +52,7 @@ html, body {
     margin: 0;
     padding: 0;
     display: block;
-    background-color: #fdfdf1;
+    background-color: #fcfcf4;
     overflow-y: auto;
 }
 
