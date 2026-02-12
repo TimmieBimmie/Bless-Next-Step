@@ -6,32 +6,55 @@
     src: url("assets/fonts/Delight-ExtraBold.ttf");
 }
 
+:root {
+    --primary: #649be7;
+    --lite: #fdfffb;
+    --dark: #10100e;
+}
+
 .bg-primary {
-    background-color: #4f95ff;
+    background-color: var(--primary);
+}
+
+.text-primary {
+    color: var(--primary);
 }
 
 .bg-lite {
-    background-color: #ffffef;
+    background-color: var(--lite);
+}
+
+.text-lite {
+    color: var(--lite);
 }
 
 .bg-dark {
-    background-color: #10100e;
+    background-color: var(--dark);
+}
+
+.text-dark {
+    color: var(--dark);
 }
 
 h1 {
     font-family: Delight, "Familjen Grotesk", Helvetica, sans-serif;
+    color: var(--dark);
 }
 
 p {
     font-family: "Familjen Grotesk", Helvetica, sans-serif;
-    word-spacing: 2px;
-    letter-spacing: -2px;
+}
+
+*::selection {
+    background-color: var(--dark);
+    color: white;
 }
 
 #app {
     width: 100%;
     position: relative;
     min-height: 100%;
+    height: 100%;
     max-width: 1350px;
     margin: auto;
     display: flex;
@@ -52,7 +75,7 @@ html, body {
     margin: 0;
     padding: 0;
     display: block;
-    background-color: #fcfcf4;
+    background-color: var(--lite);
     overflow-y: auto;
 }
 

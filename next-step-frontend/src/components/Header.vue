@@ -3,7 +3,7 @@
 import { ref, useTemplateRef, watch } from 'vue'
 import { gsap } from 'gsap'
 
-let navOpen = ref(true)
+let navOpen = ref(false)
 let navWrapper = useTemplateRef('navWrapper')
 
 function navAction() {
@@ -17,7 +17,7 @@ watch(navOpen, (open) => {
       width: '100%',
       height: '100%',
       duration: 0.7,
-      delay: 0.2,
+      delay: 0.3,
       ease: 'power3.out'
     })
   } else {
@@ -42,9 +42,9 @@ watch(navOpen, (open) => {
     </span>
   </button>
 
-  <div class="absolute top-0 left-0 w-full h-full backdrop-blur-xl p-5 ease-in duration-200" inert
+  <div class="absolute top-0 left-0 w-full h-full p-5 ease-in duration-200 z-[19]" inert
        :class="{'bg-active' : navOpen, 'bg-no-active': !navOpen}">
-    <nav class="transition max-w-[450px] max-h-[750px] ease-in-out duration-700 w-full h-full origin-top-left bg-white rounded-md" inert
+    <nav class="transition max-w-[450px] max-h-[750px] ease-in-out duration-700 origin-top-left bg-white rounded-md" inert
          ref="navWrapper">
     </nav>
   </div>
@@ -59,6 +59,7 @@ watch(navOpen, (open) => {
 
 .bg-active {
   background-color: rgba(16, 16, 14, 0.2);
+  backdrop-filter: blur(5px);
 }
 
 

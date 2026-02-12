@@ -1,19 +1,13 @@
 <script setup lang="ts">
 
 import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
-  <header>
-    <Header></Header>
-  </header>
-  <main>
+  <Header></Header>
+  <main class="w-full h-full px-5 relative flex flex-col z-[1]">
     <RouterView></RouterView>
   </main>
-  <footer>
-    <Footer></Footer>
-  </footer>
 </template>
 
 <style scoped></style>
