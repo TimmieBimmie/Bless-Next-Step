@@ -8,6 +8,7 @@
 
 :root {
     --primary: #649be7;
+    --secondary: #FF5E30;
     --lite: #fdfffb;
     --dark: #10100e;
 }
@@ -53,7 +54,7 @@ p {
 #app {
     width: 100%;
     position: relative;
-    min-height: 100dvh;
+    min-height: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -68,6 +69,7 @@ p {
 
 html, body {
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     display: block;

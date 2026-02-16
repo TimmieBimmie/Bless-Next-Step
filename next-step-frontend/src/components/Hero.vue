@@ -43,7 +43,7 @@ onMounted(() => {
         sadipscing elitr, sed diam
         nonumy eirmod tempor invidunt ut labore</p>
       <button
-          class="animate-button mt-8 text-lg my-auto flex w-fit bg-[var(--primary)] text-lite rounded-xl px-4 py-2 gap-2 hover:scale-[1.01] cursor-pointer">
+          class="animate-button mt-8 text-lg my-auto flex w-fit bg-[var(--secondary)] text-lite rounded-xl px-4 py-2 gap-2 hover:scale-[1.01] cursor-pointer">
         <p class="font-medium">Mehr dazu</p>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
              class="size-6 my-auto translate-y-[1px]">

@@ -7,7 +7,7 @@ import Hero from "@/components/Hero.vue";
 <template>
   <Header></Header>
   <Hero></Hero>
-  <main class="w-full min-h-full h-full px-5 relative flex flex-col z-[1] max-w-[1350px]">
+  <main class="w-full min-h-full h-full px-5 relative pb-20 flex flex-col z-[1] max-w-[1350px]">
     <RouterView></RouterView>
   </main>
 </template>
