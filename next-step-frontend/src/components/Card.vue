@@ -8,6 +8,7 @@ interface CardData {
 
 const { data } = defineProps<{data:CardData}>()
 
+
 </script>
 
 <template>
