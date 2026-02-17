@@ -1,8 +1,12 @@
 <script setup lang="ts">
 
-defineProps({
-  data: JSON
-})
+interface CardData {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+const { data } = defineProps<{data:CardData}>()
 
 </script>
 
