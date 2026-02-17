@@ -95,6 +95,24 @@ function videoAction() {
         <Card v-for="step of steps" :data="step"></Card>
       </div>
     </div>
+
+    <div class="w-full flex flex-col">
+      <h1 class="animate-main mb-10">ÜBER UNS</h1>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-3 gap-y-3 justify-center">
+        <div class="h-20 w-full bg-gray-100 border-[1px] border-gray-400 rounded-md">
+            <img src="" class="w-full h-full object-cover">
+        </div>
+
+        <div class="h-20 w-full bg-gray-100 border-[1px] border-gray-400 rounded-md">
+          <img src="" class="w-full h-full object-cover">
+        </div>
+
+        <div class="h-20 w-full bg-gray-100 border-[1px] border-gray-400 rounded-md">
+          <img src="" class="w-full h-full object-cover">
+        </div>
+
+      </div>
+    </div>
   </div>
 
 </template>
