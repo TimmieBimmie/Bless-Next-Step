@@ -107,6 +107,12 @@
 ### Form
 
 - Show form submits in Admin panel --> If needed add a badge if only one person makes contact
+
+<br>
+
+### Media
+
+- use r2 Blob Storage from Cloudflare so media gets cached --> ask for subdomain "media.bless-basel.ch"
   
 
 <br>
