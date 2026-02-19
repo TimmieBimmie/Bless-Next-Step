@@ -1,7 +1,7 @@
 <script setup>
 
-import { ref, useTemplateRef, watch } from 'vue'
-import { gsap } from 'gsap'
+import {ref, useTemplateRef, watch} from 'vue'
+import {gsap} from 'gsap'
 
 let navOpen = ref(false)
 let navWrapper = useTemplateRef('navWrapper')
@@ -12,7 +12,7 @@ function navAction() {
 }
 
 function closeNav($event) {
-  if(navOpen.value) {
+  if (navOpen.value) {
     navOpen.value = false;
   }
 }
@@ -26,6 +26,7 @@ watch(navOpen, (open) => {
     gsap.to(navWrapper.value, {
       width: '100%',
       height: '100%',
+      padding: '64px 20px 0 20px',
       duration: 0.9,
       delay: 0.3,
       ease: 'power3.out'
@@ -36,6 +37,7 @@ watch(navOpen, (open) => {
       width: '100px',
       height: '48px',
       duration: 0.7,
+      padding: '0',
       ease: 'power3.inOut'
     })
   }
@@ -53,10 +55,39 @@ watch(navOpen, (open) => {
     </span>
   </button>
 
-    <div class="fixed top-0 left-0 w-full h-full p-5 ease-in duration-200 z-[19]" inert ref="outerNavWrapper" @click="closeNav($event)"
+  <div class="fixed top-0 left-0 w-full h-full p-5 ease-in duration-200 z-[19]" inert ref="outerNavWrapper"
+       @click="closeNav($event)"
        :class="{'bg-active pointer-events-auto' : navOpen, 'bg-no-active pointer-events-none': !navOpen}">
-    <nav class="transition max-w-[450px] max-h-[750px] w-0 h-0 ease-in-out duration-700 origin-top-left bg-white rounded-xl" @click.stop inert
-         ref="navWrapper">
+    <nav
+        class="transition max-w-[450px] max-h-[750px] w-0 h-0 ease-in-out duration-700 overflow-y-auto origin-top-left bg-white rounded-xl gap-2 flex flex-col shrink-0"
+        @click.stop inert
+        ref="navWrapper">
+      <div class="w-full flex gap-2">
+        <button class="w-1/2 rounded-xl h-28 bg-red-400 flex items-center justify-center shrink-0">
+          <h1>HOME</h1>
+        </button>
+        <button class="w-1/2 rounded-xl h-28 bg-red-400 flex items-center justify-center shrink-0">
+          <h1>VISION</h1>
+        </button>
+      </div>
+      <div class="w-full flex gap-2">
+        <button class="w-1/2 rounded-xl h-28 bg-red-400 flex items-center justify-center shrink-0">
+          <h1>STEPS</h1>
+        </button>
+        <button class="w-1/2 rounded-xl h-28 bg-red-400 flex items-center justify-center shrink-0">
+          <h1>ABOUT</h1>
+        </button>
+      </div>
+      <button class="w-full rounded-xl h-28 bg-red-400 flex items-center justify-center shrink-0">
+        <h1>FORMULAR</h1>
+      </button>
+      <button class="mt-8 bg-gray-200 rounded-lg py-3 shrink-0">
+        <h1>KONTAKT</h1>
+      </button>
+      <button class="mt-2 bg-gray-200 rounded-lg py-3 shrink-0">
+        <h1>KONTAKT</h1>
+      </button>
+      <a class="mt-7 mb-5 text-center text-md" href="https://github.com/TimmieBimmie">made by <span>tim</span></a>
     </nav>
   </div>
 
@@ -73,5 +104,8 @@ watch(navOpen, (open) => {
   backdrop-filter: blur(5px);
 }
 
+h1 {
+  font-size: 2rem;
+}
 
 </style>

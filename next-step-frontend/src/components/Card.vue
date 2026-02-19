@@ -12,7 +12,7 @@ const { data } = defineProps<{data:CardData}>()
 </script>
 
 <template>
-  <div class="w-auto rounded-xl flex gap-4 p-3 max-w-[750px] justify-self-center animate-main" style="background-color: rgba(255, 132, 38, 0.4)">
+  <div class="w-auto rounded-xl flex gap-4 p-3 max-w-[750px] justify-self-center animate-main bg-[#c6dcf8]">
     <div class="h-full aspect-square bg-dark rounded-xl p-2">
       <img :src="data.icon" class="h-14 w-14 object-contain"
            alt="Icon"/>
