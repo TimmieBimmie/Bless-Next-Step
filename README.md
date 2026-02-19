@@ -112,7 +112,7 @@
 
 ### Media
 
-- use r2 Blob Storage from Cloudflare so media gets cached --> ask for subdomain "media.bless-basel.ch"
+- use r2 Blob Storage from Cloudflare so media gets cached --> ask for subdomain "media.blessbasel.ch" if not possible "next-step.ch"
   
 
 <br>
