@@ -82,6 +82,36 @@
 <br>
 <br>
 
+## Backend Notes
+
+<br>
+
+### Session Management
+
+- When user starts a Chat call endpoint "api/start/chat" --> create session, user and chat object. Show in Admin Panel
+- Create session for admins when logging in
+- Work with ROLES for API endpoints
+
+<br>
+
+### Chats
+
+- Users start a chat to ask question
+- Implement with websockets (if too time-consuming --> polling)
+- User starts a Chat
+- When admin opens chat --> show message "&#60;Name of admin&#62; joined the conversation"
+- show typing bubbles --> if enough time to implement
+
+<br>
+
+### Form
+
+- Show form submits in Admin panel --> If needed add a badge if only one person makes contact
+  
+
+<br>
+<br>
+
 # COMMENTS
 
 
