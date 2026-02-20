@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import {onMounted} from "vue";
 import {gsap} from "gsap";
 import { scrollToElement } from "@/services/scroll-service.js";
