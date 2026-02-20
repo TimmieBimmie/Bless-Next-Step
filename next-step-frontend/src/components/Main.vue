@@ -231,27 +231,32 @@ async function deactivateChurchDetail() {
                  class="w-full max-h-[350px] object-cover aspect-video object-center rounded-xl"/>
             <p class="w-full text-lg text-gray-700 mt-7 hyphens-auto break-inside-auto">
               {{ activeChurch?.description.text }}</p>
-            <div class="flex gap-5 mt-4 items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                   stroke="currentColor" class="size-7">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-              </svg>
-              <p class="font-medium text-lg">{{ activeChurch?.description.times }}</p>
-            </div>
-            <div class="flex gap-5 mt-2 mb-4 items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                   stroke="currentColor" class="size-7">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
-                <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
-              </svg>
-              <a class="font-medium text-lg underline underline-offset-2" :href="activeChurch?.description.place">Google
-                Maps</a>
+            <div class="flex flex-col h-full justify-center">
+              <div class="flex gap-5 mt-4 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                     stroke="currentColor" class="size-7">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                </svg>
+                <p class="font-medium text-lg">{{ activeChurch?.description.times }}</p>
+              </div>
+              <div class="flex gap-5 mt-2 mb-4 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                     stroke="currentColor" class="size-7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
+                </svg>
+                <a class="font-medium text-lg underline underline-offset-2" :href="activeChurch?.description.place">Google
+                  Maps</a>
+              </div>
             </div>
           </div>
           <a class="mt-auto w-full max-w-[750px] mx-auto" :href="activeChurch?.website" target="_self">
-            <button class="cursor-pointer w-full bg-[var(--secondary)] py-[10px] rounded-lg text-[var(--lite)] familjen-grotesk text-lg font-medium">Zur Website</button>
+            <button
+                class="cursor-pointer w-full bg-[var(--secondary)] py-[10px] rounded-lg text-[var(--lite)] familjen-grotesk text-lg font-medium">
+              Zur Website
+            </button>
           </a>
         </div>
 
