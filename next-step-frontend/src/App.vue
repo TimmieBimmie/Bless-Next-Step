@@ -5,7 +5,7 @@ import Header from '@/components/Header.vue'
 
 <template>
   <Header></Header>
-    <main class="w-full relative flex flex-col max-w-[1350px] mx-auto">
+    <main class="w-full relative flex flex-col">
       <RouterView></RouterView>
     </main>
 </template>

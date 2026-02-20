@@ -250,7 +250,7 @@ async function deactivateChurchDetail() {
                 Maps</a>
             </div>
             <a class="mt-auto w-full" :href="activeChurch?.website" target="_self">
-              <button class="w-full bg-[var(--primary)] py-[10px] rounded-lg text-[var(--lite)] familjen-grotesk text-lg font-medium">Zur Website</button>
+              <button class="w-full bg-[var(--secondary)] py-[10px] rounded-lg text-[var(--lite)] familjen-grotesk text-lg font-medium">Zur Website</button>
             </a>
           </div>
         </div>

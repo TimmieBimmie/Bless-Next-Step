@@ -1,11 +1,21 @@
 <script setup>
 
-import {ref, useTemplateRef, watch} from 'vue'
+import {onMounted, ref, useTemplateRef, watch} from 'vue'
 import {gsap} from 'gsap'
+import {scrollToElement} from "@/services/scroll-service.js";
+import router from "@/router/index.ts";
 
 let navOpen = ref(false)
 let navWrapper = useTemplateRef('navWrapper')
 let outerNavWrapper = useTemplateRef('outerNavWrapper')
+
+onMounted(() => {
+  document.body.addEventListener("keydown", (e) => {
+    if(e.key === 'Escape' && navOpen.value) {
+      navOpen.value = false;
+    }
+  })
+})
 
 function navAction() {
   navOpen.value = !navOpen.value
@@ -43,6 +53,21 @@ watch(navOpen, (open) => {
   }
 })
 
+async function navigate(target) {
+  navOpen.value = false;
+  let behaviour = "smooth";
+  if(router.currentRoute.value.fullPath !== "/") {
+    await router.push("/");
+    behaviour = "instant"
+  }
+  scrollToElement(target, behaviour);
+}
+
+function routeToForm() {
+  router.push('/form');
+  navOpen.value = false;
+}
+
 </script>
 
 <template>
@@ -62,30 +87,31 @@ watch(navOpen, (open) => {
         class="transition max-w-[450px] max-h-[750px] w-0 h-0 ease-in-out duration-700 overflow-y-auto origin-top-left bg-white rounded-xl gap-2 flex flex-col shrink-0"
         @click.stop inert
         ref="navWrapper">
-      <div class="w-full flex gap-2">
-        <button class="w-1/2 rounded-xl h-28 bg-red-400 flex items-center justify-center shrink-0">
+      <div class="w-full grid grid-cols-2 gap-x-2">
+        <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0"
+                @click="navigate('home')">
           <h1>HOME</h1>
         </button>
-        <button class="w-1/2 rounded-xl h-28 bg-red-400 flex items-center justify-center shrink-0">
+        <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0" @click="navigate('our-vision')">
           <h1>VISION</h1>
         </button>
       </div>
-      <div class="w-full flex gap-2">
-        <button class="w-1/2 rounded-xl h-28 bg-red-400 flex items-center justify-center shrink-0">
+      <div class="w-full grid grid-cols-2 gap-x-2">
+        <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0" @click="navigate('next-steps')">
           <h1>STEPS</h1>
         </button>
-        <button class="w-1/2 rounded-xl h-28 bg-red-400 flex items-center justify-center shrink-0">
+        <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0" @click="navigate('about-us')">
           <h1>ABOUT</h1>
         </button>
       </div>
-      <button class="w-full rounded-xl h-28 bg-red-400 flex items-center justify-center shrink-0">
+      <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0" @click="routeToForm()">
         <h1>FORMULAR</h1>
       </button>
       <button class="mt-8 bg-gray-200 rounded-lg py-3 shrink-0">
-        <h1>KONTAKT</h1>
+        <h1 style="color: var(--dark)">KONTAKT</h1>
       </button>
       <button class="mt-2 bg-gray-200 rounded-lg py-3 shrink-0">
-        <h1>KONTAKT</h1>
+        <h1 style="color: var(--dark)">KONTAKT</h1>
       </button>
       <a class="mt-7 mb-5 text-center text-md" href="https://github.com/TimmieBimmie">made by <span>tim</span></a>
     </nav>
@@ -106,6 +132,7 @@ watch(navOpen, (open) => {
 
 h1 {
   font-size: 2rem;
+  color: var(--lite);
 }
 
 </style>
