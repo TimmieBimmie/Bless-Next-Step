@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {onMounted} from "vue";
 import {gsap} from "gsap";
-import { scrollToElement } from "../services/scroll-service";
+import { scrollToElement } from "@/services/scroll-service.js";
 
 onMounted(() => {
   gsap.from('.animate', {
