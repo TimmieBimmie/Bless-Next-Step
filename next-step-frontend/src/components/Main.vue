@@ -212,7 +212,7 @@ async function deactivateChurchDetail() {
 
     <div class="w-full flex flex-col" id="about-us">
       <div v-show="activeChurch"
-           class="fixed p-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[100dvh] z-50 opacity-0 flex justify-center items-center"
+           class="fixed p-7 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[100dvh] z-50 opacity-0 flex justify-center items-center"
            inert ref="churchDetailWrapper" @click="deactivateChurchDetail()">
 
         <div @click.stop
@@ -226,12 +226,12 @@ async function deactivateChurchDetail() {
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
             </svg>
           </button>
-          <div class="flex flex-col max-w-[750px] mx-auto mt-5 h-full">
+          <div class="flex flex-col max-w-[750px] mx-auto mt-5 h-full overflow-y-auto">
             <img :src="activeChurch?.descImgSrc"
                  class="w-full max-h-[350px] object-cover aspect-video object-center rounded-xl"/>
             <p class="w-full text-lg text-gray-700 mt-7 hyphens-auto break-inside-auto">
               {{ activeChurch?.description.text }}</p>
-            <div class="flex gap-5 mt-7 items-center">
+            <div class="flex gap-5 mt-4 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                    stroke="currentColor" class="size-7">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -239,7 +239,7 @@ async function deactivateChurchDetail() {
               </svg>
               <p class="font-medium text-lg">{{ activeChurch?.description.times }}</p>
             </div>
-            <div class="flex gap-5 mt-2 items-center">
+            <div class="flex gap-5 mt-2 mb-4 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                    stroke="currentColor" class="size-7">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
@@ -249,10 +249,10 @@ async function deactivateChurchDetail() {
               <a class="font-medium text-lg underline underline-offset-2" :href="activeChurch?.description.place">Google
                 Maps</a>
             </div>
-            <a class="mt-auto w-full" :href="activeChurch?.website" target="_self">
-              <button class="w-full bg-[var(--secondary)] py-[10px] rounded-lg text-[var(--lite)] familjen-grotesk text-lg font-medium">Zur Website</button>
-            </a>
           </div>
+          <a class="mt-auto w-full max-w-[750px] mx-auto" :href="activeChurch?.website" target="_self">
+            <button class="cursor-pointer w-full bg-[var(--secondary)] py-[10px] rounded-lg text-[var(--lite)] familjen-grotesk text-lg font-medium">Zur Website</button>
+          </a>
         </div>
 
       </div>

@@ -72,7 +72,7 @@ function routeToForm() {
 
 <template>
   <button @click="navAction"
-          class="fixed top-5 left-5 z-20 w-[100px] h-12 bg-white rounded-xl familjen-grotesk font-bold cursor-pointer text-sm"
+          class="fixed top-7 left-7 z-20 w-[100px] h-12 bg-white rounded-xl familjen-grotesk font-bold cursor-pointer text-sm"
           :class="{'delay-500 drop-shadow-xl': !navOpen, 'delay-0 drop-shadow-none': navOpen}">
     <span class="flex flex-col overflow-hidden h-5 gap-2">
       <span class="transition duration-400 delay-150" :class="{'-translate-y-10': navOpen, 'translate-y-0': !navOpen}">MENÜ</span>
@@ -80,7 +80,7 @@ function routeToForm() {
     </span>
   </button>
 
-  <div class="fixed top-0 left-0 w-full h-full p-5 ease-in duration-200 z-[19]" inert ref="outerNavWrapper"
+  <div class="fixed top-0 left-0 w-full h-full p-7 ease-in duration-200 z-[19]" inert ref="outerNavWrapper"
        @click="closeNav($event)"
        :class="{'bg-active pointer-events-auto' : navOpen, 'bg-no-active pointer-events-none': !navOpen}">
     <nav
