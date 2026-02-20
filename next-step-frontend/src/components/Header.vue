@@ -11,7 +11,7 @@ let outerNavWrapper = useTemplateRef('outerNavWrapper')
 
 onMounted(() => {
   document.body.addEventListener("keydown", (e) => {
-    if(e.key === 'Escape' && navOpen.value) {
+    if (e.key === 'Escape' && navOpen.value) {
       navOpen.value = false;
     }
   })
@@ -56,7 +56,7 @@ watch(navOpen, (open) => {
 async function navigate(target) {
   navOpen.value = false;
   let behaviour = "smooth";
-  if(router.currentRoute.value.fullPath !== "/") {
+  if (router.currentRoute.value.fullPath !== "/") {
     await router.push("/");
     behaviour = "instant"
   }
@@ -92,28 +92,35 @@ function routeToForm() {
                 @click="navigate('home')">
           <h1>HOME</h1>
         </button>
-        <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0" @click="navigate('our-vision')">
+        <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0"
+                @click="navigate('our-vision')">
           <h1>VISION</h1>
         </button>
       </div>
       <div class="w-full grid grid-cols-2 gap-x-2">
-        <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0" @click="navigate('next-steps')">
+        <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0"
+                @click="navigate('next-steps')">
           <h1>STEPS</h1>
         </button>
-        <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0" @click="navigate('about-us')">
+        <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0"
+                @click="navigate('about-us')">
           <h1>ABOUT</h1>
         </button>
       </div>
-      <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0" @click="routeToForm()">
+      <button class="w-full rounded-xl h-28 bg-[var(--primary)] flex items-center justify-center shrink-0"
+              @click="routeToForm()">
         <h1>FORMULAR</h1>
       </button>
-      <button class="mt-8 bg-gray-200 rounded-lg py-3 shrink-0">
-        <h1 style="color: var(--dark)">KONTAKT</h1>
-      </button>
-      <button class="mt-2 bg-gray-200 rounded-lg py-3 shrink-0">
-        <h1 style="color: var(--dark)">KONTAKT</h1>
-      </button>
-      <a class="mt-7 mb-5 text-center text-md" href="https://github.com/TimmieBimmie">made by <span>tim</span></a>
+      <div class="flex flex-col h-full gap-3">
+        <button class="mt-8 bg-gray-200 rounded-lg py-3 shrink-0">
+          <h1 style="color: var(--dark)">KONTAKT</h1>
+        </button>
+        <button class="bg-gray-200 rounded-lg py-3 shrink-0">
+          <h1 style="color: var(--dark)">KONTAKT</h1>
+        </button>
+      </div>
+      <a class="my-5 text-center text-lg familjen-grotesk" href="https://github.com/TimmieBimmie">made by <span
+          class="underline underline-offset-1">Tim</span></a>
     </nav>
   </div>
 
